@@ -2,8 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>6.1 - Introducción a jQuery (Ejemplo 1)</title>
-
+  <title>6.1 - Introducción a JavaScript Puro (Ejemplo 1)</title>
 </head>
 <body>
   <h1>Bibliotecas JavaScript en el Front-End</h1>
@@ -18,13 +17,15 @@
 
   <p id="mensaje"></p>
 
+  
   <script>
     // Cuando el documento está listo
-    $(function () {
-      $("#btn-info").on("click", function () {
-        $("#mensaje").text(
-          "jQuery simplifica tareas de JavaScript: selección de elementos, eventos y animaciones."
-        );
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.getElementById("btn-info");
+      const mensaje = document.getElementById("mensaje");
+      btn.addEventListener("click", function () {
+        mensaje.textContent =
+          "jQuery simplifica tareas de JavaScript: selección de elementos, eventos y animaciones.";
       });
     });
   </script>
