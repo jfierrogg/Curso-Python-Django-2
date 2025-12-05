@@ -7,7 +7,7 @@ def es_par(numero):
 
 
 for n in range(6):
-    if es_par(n):
+    if es_par(n) > 5:
         print(n, "es par")
     else:
         print(n, "es impar")

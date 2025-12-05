@@ -5,6 +5,7 @@ persona = {
     "nombre": "Luis",
     "edad": 30,
     "ciudad": "Santiago",
+    "pais": "Chile",
 }
 
 print("Nombre:", persona["nombre"])
