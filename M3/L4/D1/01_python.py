@@ -12,7 +12,7 @@ inicio = perf_counter()
 
 # 1) while básico: contador ascendente
 contador = 1
-while contador <= 50000:
+while contador <= 500000:
     print("Contando:", contador)
     contador += 1
 

@@ -1,8 +1,17 @@
-# 17) for sobre diccionario: claves
-precios = {"manzana": 500, "pera": 600, "naranja": 450}
-for fruta in precios:
+frutas_precios = {"manzana": 500, "pera": 600, "naranja": 450}
+
+# Por defecto
+for default in frutas_precios:
+    print("Fruta:", default)
+
+# Por Items Clave y Valor
+for fruta, precio in frutas_precios.items():
+    print(f"{fruta} cuesta {precio}")
+
+# Por Clave
+for fruta in frutas_precios.keys():
     print("Fruta:", fruta)
 
-# 18) for sobre diccionario: items (clave y valor)
-for fruta, precio in precios.items():
-    print(f"{fruta} cuesta {precio}")
+# Por Valor
+for precio in frutas_precios.values():
+    print("Precio:", precio)
