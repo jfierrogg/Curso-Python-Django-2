@@ -2,7 +2,7 @@
 n = 3
 identidad = []
 
-for i in range(n):
+for i in range(n): 
     fila = []
     for j in range(n):
         if i == j:

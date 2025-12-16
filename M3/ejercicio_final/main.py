@@ -29,22 +29,18 @@ def buscar():
         print("Opcion incorrecta")
 
 carrito = []
-productos = []
-precios = []
 
-def agregar(producto):
-    productos.append(producto["nombre"])
-    precios.append(producto["precio"])
-    #carrito.extend(productos, precios)
+def agregar():
+    producto_seleccionado = int(input("Ingresa el ID del producto seleccionado: "))
+    producto = productos_disponibles[producto_seleccionado]
+    cantidad = int(input("Ingrese cantidad del producto: "))
+    carrito.append((producto["nombre"], producto["precio"], cantidad))
 
 def ver_carrito_total():
-    print(productos)
-    """
-    for producto, precio in zip(productos, precios):
-        total = precio + precio
-        print(carrito)
-        print(f"{producto}: {precio} unidades, total = {total}")
-    """
+    for nombre, precio, cantidad in carrito:
+        total_producto = precio * cantidad
+        print(f"Nombre: {nombre}, Precio:  {precio}, Cantidad: {cantidad} Total producto: {total_producto}")
+        print(total_producto + total_producto)
 
 while True:
     print("""Bienvenido/a a tu Ecommerce
@@ -64,8 +60,8 @@ while True:
             buscar()
         elif opcion == 3:
             ver_productos()
-            producto_seleccionado = int(input("Ingresa el ID del producto seleccionado: "))
-            agregar(productos_disponibles[producto_seleccionado])
+
+            agregar()
         elif opcion == 4:
             ver_carrito_total()
         elif opcion == 5:
