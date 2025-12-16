@@ -37,10 +37,15 @@ def agregar():
     carrito.append((producto["nombre"], producto["precio"], cantidad))
 
 def ver_carrito_total():
-    for nombre, precio, cantidad in carrito:
-        total_producto = precio * cantidad
-        print(f"Nombre: {nombre}, Precio:  {precio}, Cantidad: {cantidad} Total producto: {total_producto}")
-        print(total_producto + total_producto)
+    total = 0
+    if len(carrito) > 0:
+        for nombre, precio, cantidad in carrito:
+            total_producto = precio * cantidad
+            total += total_producto
+            print(f"Nombre: {nombre}, Precio:  {precio}, Cantidad: {cantidad} Total producto: {total_producto}")
+        print(f"Total a pagar: {total}")
+    else:
+        print("Carrito vacio")
 
 while True:
     print("""Bienvenido/a a tu Ecommerce
