@@ -4,6 +4,6 @@ import copy
 original = [[1, 2], [3, 4]]
 copia_profunda = copy.deepcopy(original)
 
-original[0].append(99)
+copia_profunda[0].append(99)
 print(original)        # [[1, 2, 99], [3, 4]]
 print(copia_profunda)  # [[1, 2], [3, 4]]
