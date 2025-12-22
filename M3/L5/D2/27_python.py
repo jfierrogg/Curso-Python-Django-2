@@ -10,6 +10,9 @@ persona["edad"] = 31
 persona["correo"] = "ana@example.com"
 
 # 27) Dict: métodos keys(), values(), items()
+for default in persona:
+    print("default:", default)
+
 for clave in persona.keys():
     print("clave:", clave)
 
